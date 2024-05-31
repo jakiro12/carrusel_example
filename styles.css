@@ -1,0 +1,55 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:#D6DBDD;
+}
+.media-scroller {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 28%;
+  padding: 0 1rem 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 1px #00000055;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(10px, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+.title{
+   color: rgb(188, 187, 187);
+}
+.price-element{
+   font-size: 20px;
+   font-weight: bolder;
+}
